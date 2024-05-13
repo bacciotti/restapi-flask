@@ -58,10 +58,13 @@ class User(Resource):
 
         try:
             response = UserModel(**data).save()
-            return {'message': 'User %s created successfully' % response.first_name}
+            return {
+                'message': 'User %s created successfully' % response.first_name
+            }
         except NotUniqueError:
-            return {'message': 'CPF already exists in the database.'}
-
+            return {
+                'message': 'CPF already exists in the database.'
+            }
 
     def get(self, cpf):
         return {'message': 'CPF'}
