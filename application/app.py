@@ -26,6 +26,7 @@ _user_parser.add_argument('birth_date',
                           required=True,
                           help="This field cannot be blank.")
 
+
 class Users(Resource):
     def get(self):
         return jsonify(UserModel.objects())
@@ -52,7 +53,3 @@ class User(Resource):
             return jsonify(response)
 
         return {"message": "User not found."}, 400
-
-
-
-
