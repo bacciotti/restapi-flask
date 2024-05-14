@@ -1,4 +1,5 @@
-FROM python:3.9.12-alpine3.15
+FROM --platform=linux/amd64 python:3.9.12-alpine3.15
+#FROM python:3.9.12-alpine3.15
 
 EXPOSE 5000
 
