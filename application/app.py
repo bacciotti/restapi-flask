@@ -1,7 +1,7 @@
 from flask import jsonify
 from flask_restful import Resource, reqparse
 from mongoengine.errors import NotUniqueError
-from .models import UserModel
+from .model import UserModel
 
 
 _user_parser = reqparse.RequestParser()
