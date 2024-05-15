@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from .db import init_db
-from .app import Users, User
+from .app import Users, User, HealthCheck
 
 
 def create_app(config_object):
@@ -10,6 +9,8 @@ def create_app(config_object):
     app.config.from_object(config_object)
     # init_db(app)
 
-    api.add_resource(Users, '/users')
-    api.add_resource(User, '/user', '/user/<string:cpf>')
+    api.add_resource(Users, "/users")
+    api.add_resource(User, "/user", "/user/<string:cpf>")
+    api.add_resource(HealthCheck, "/health")
+
     return app
