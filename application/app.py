@@ -29,27 +29,12 @@ _user_parser.add_argument('birth_date',
 
 class Users(Resource):
     def get(self):
-        return jsonify(UserModel.objects())
+        return {"message": "Users / get"}, 200
 
 
 class User(Resource):
     def post(self):
-        data = _user_parser.parse_args()
-
-        try:
-            response = UserModel(**data).save()
-            return {
-                'message': 'User %s created successfully' % response.first_name
-            }
-        except NotUniqueError:
-            return {
-                'message': 'CPF already exists in the database.'
-            }
+        return {"message": "User / post"}, 200
 
     def get(self, cpf):
-        response = UserModel.objects(cpf=cpf)
-
-        if response:
-            return jsonify(response)
-
-        return {"message": "User not found."}, 400
+        return {"message": "User / get"}, 200
