@@ -105,10 +105,6 @@ We welcome contributions from the community. Please fork the repository and subm
 
 This project is licensed under the MIT License.
 
-## Contact
-
-For any inquiries or issues, please contact us at [your-email@example.com].
-
 ---
 
 Leverage this User Management API to efficiently manage users in your applications with a scalable and reliable infrastructure. As an experienced professional, you can appreciate the thoughtfulness and best practices integrated into this project.
